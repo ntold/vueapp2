@@ -6,7 +6,7 @@ import vueResource from 'vue-resource'
 import App from './App'
 import Users from './components/Users'
 import Test from './components/Test'
-import Olek from './components/Olek'
+import Plantes from './components/Plantes'
 
 
 Vue.use(vueResource)
@@ -18,7 +18,7 @@ const router = new VueRouter({
     routes: [
         {path:'/', component: Users},
         {path: '/test', component: Test},
-        {path: '/olek', component: Olek}
+        {path: '/plantes', component: Plantes}
     ]
 });
 

@@ -1,28 +1,33 @@
 <template>
   <div>
+        <router-view></router-view>
         <ul>
             <li><router-link to="/">Users</router-link></li>
             <li><router-link to="/test">Test</router-link></li>
-            <li><router-link to="/olek">Olek</router-link></li>
+            <li><router-link to="/Plantes">Plantes</router-link></li>
         </ul>
-        <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Test from './components/Test'
 import Users from './components/Users'
-import Olek from './components/Olek'
+import Plantes from './components/Plantes'
 
 export default {
   name: 'App',
   components: {
-    Test, Users, Olek
+    Test, Users, Plantes
   }
 }
 </script>
 
 <style>
     /* Allgemeine Sytles*/
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
 
 </style>
