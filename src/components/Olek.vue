@@ -1,6 +1,6 @@
 <template>
     <div class="users">
-        <h1>Users</h1>
+        <h1>Olek</h1>
         <form v-on:submit="addUser">
             <input type="text" v-model="newUser.name" placeholder="Enter Name">
             <br />
@@ -54,13 +54,5 @@
 <style scoped>
     .contacted{
         text-decoration: line-through;
-    },
-    #app{
-         font-family: 'Avenir', Helvetica, Arial, sans-serif;
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
-         text-align: center;
-         color: #2c3e50;
-         margin-top: 10px;
     }
 </style>

@@ -7,11 +7,12 @@
 <script>
 import Test from './components/test'
 import Users from './components/users'
+import Olek from './components/olek'
 
 export default {
   name: 'App',
   components: {
-    Test, Users
+    Test, Users, Olek
   }
 }
 </script>

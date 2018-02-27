@@ -6,6 +6,7 @@ import vueResource from 'vue-resource'
 import App from './App'
 import Users from './components/Users'
 import Test from './components/Test'
+import Olek from './components/Olek'
 
 
 Vue.use(vueResource)
@@ -16,7 +17,8 @@ const router = new VueRouter({
     base: __dirname,
     routes: [
         {path:'/', component: Users},
-        {path: '/test', component: Test}
+        {path: '/test', component: Test},
+        {path: '/olek', component: Olek}
     ]
 });
 
@@ -30,8 +32,9 @@ new Vue({
         <ul>
             <li><router-link to="/">Users</router-link></li>
             <li><router-link to="/test">Test</router-link></li>
+            <li><router-link to="/olek">Olek</router-link></li>
         </ul>
         <router-view></router-view>
     </div>
-    `,
+    `
 }).$mount('#app')
