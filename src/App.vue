@@ -1,13 +1,18 @@
 <template>
-  <div id="app">
-    <users></users>
+  <div>
+        <ul>
+            <li><router-link to="/">Users</router-link></li>
+            <li><router-link to="/test">Test</router-link></li>
+            <li><router-link to="/olek">Olek</router-link></li>
+        </ul>
+        <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Test from './components/test'
-import Users from './components/users'
-import Olek from './components/olek'
+import Test from './components/Test'
+import Users from './components/Users'
+import Olek from './components/Olek'
 
 export default {
   name: 'App',
@@ -18,12 +23,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    /* Allgemeine Sytles*/
+
 </style>

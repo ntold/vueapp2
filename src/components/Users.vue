@@ -16,10 +16,13 @@
                 </span>
             </li>
         </ul>
+        <li><router-link to="/Test">Test</router-link></li>
     </div>
 </template>
 
 <script>
+    import O from "./Test"
+    console.log(O.methods.greet)
     export default {
         name: 'users',
         data() {
@@ -57,8 +60,6 @@
     },
     #app{
          font-family: 'Avenir', Helvetica, Arial, sans-serif;
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
          text-align: center;
          color: #2c3e50;
          margin-top: 10px;
