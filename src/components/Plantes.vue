@@ -4,7 +4,7 @@
             <img src="../assets/planets.jpg" alt="jaa">
             <div class="centerText"> {{message}} &nbsp; {{message2}} {{email}} </div>
             <div class="inputBox">
-                <input type="text" v-model="newEmail.email" v-on:keyup.enter="enterHit" class="inputStyle" placeholder="E-Mail">
+                <input type="text" v-model="newEmail" v-on:keyup.enter="enterHit" class="inputStyle" placeholder="E-Mail">
             </div>
         </div>
     </div>
@@ -12,25 +12,21 @@
 
 <script>
     export default {
-        name: 'test',
+        name: 'Email',
         data() {
             return {
                 message: "C O M I N G ",
                 message2: "S O O N",
-                email: [],
-                newEmail: {},
+                email: "",
+                newEmail: "",
             }
         },
         methods: {
-            enterHit: function(e){
-                this.email.push({
-                    email: this.newEmail.email,
-                });
-                e.preventDefault();
-                console.log("ay");
+            enterHit: function(){
+                this.email = this.newEmail;
+                
         },
         computed: {
-
             }
         }
     }
@@ -48,13 +44,13 @@
         width: auto\9;
     }
     .centerText {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    font-family: Helvetica;
-    color: red;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        font-family: Helvetica;
+        color: red;
     }
     .inputBox{
         position: absolute;
