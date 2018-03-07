@@ -15,7 +15,7 @@
         name: 'Email',
         data() {
             return {
-                message: "C O M I N G ",
+                message: "C O M I N G!",
                 message2: "S O O N",
                 email: "",
                 newEmail: "",
@@ -24,7 +24,7 @@
         methods: {
             enterHit: function(){
                 this.email = this.newEmail;
-                
+
         },
         computed: {
             }
