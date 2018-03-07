@@ -7,6 +7,7 @@ import App from './App'
 import Users from './components/Users'
 import Test from './components/Test'
 import Plantes from './components/Plantes'
+import Kalkulation from './components/Kalkulation'
 
 
 Vue.use(vueResource)
@@ -18,7 +19,8 @@ const router = new VueRouter({
     routes: [
         {path:'/', component: Users},
         {path: '/test', component: Test},
-        {path: '/plantes', component: Plantes}
+        {path: '/plantes', component: Plantes},
+        {path: '/kalkulation', component: Kalkulation}
     ]
 });
 
