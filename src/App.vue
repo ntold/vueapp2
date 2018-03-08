@@ -2,9 +2,9 @@
   <div>
     <nav class="nav">
       <ul>
+        <li><router-link to="/Kalkulation">Kalkulation</router-link></li>
         <li><router-link to="/">Users</router-link></li>
         <li><router-link to="/test">Test</router-link></li>
-        <li><router-link to="/Kalkulation">Kalkulation</router-link></li>
         <li><router-link to="/Plantes">Plantes</router-link></li>
       </ul>
     </nav>

@@ -1,42 +1,40 @@
 <template>
     <div class="users">
         <h1>Kalkulation</h1>
-        <form v-on:submit="addUser">
-            <input type="text" v-model="newUser.name" placeholder="Enter Name">
-            <br />
-            <input type="text" v-model="newUser.email" placeholder="Enter Email">
-            <br />
-            <input type="submit" value="Submit">
-        </form>
-        <ul>
+            <input type="text" placeholder="Kostenstelle">
+            <input type="text" placeholder="Operation">
+            <input type="text" placeholder="Std / ta">
+            <input type="text" placeholder="Std / tr">
+            <button v-on:click="addFertigung()">Submit</button>
+            {{Kostenstelle.Fertigung}}
+      <!--  <ul>
             <li v-for="user in users">
                 <input type="checkbox" class="toggle" v-model="user.contacted">
                 <span :class="{contacted: user.contacted}">
                     {{user.name}}: {{user.email}} <button v-on:click="deleteUser(user)">x</button>
                 </span>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </template>
 
 <script>
+    import Kostenstellen from '../assets/Fertigung'
     export default {
-        name: 'users',
+        name: 'Fertigung',
         data() {
             return {
-                newUser: {},
-                users: []
+                newFertigung: {},
+                Fertigung: [],
 
             }
         },
         methods: {
-            addUser: function(e){
-                this.users.push({
-                    name: this.newUser.name,
-                    email: this.newUser.email,
-                    contacted: false
+            addFertigung: function(){
+              console.log("hi");
+                this.Fertigung.push({
+                    Fertigung: this.newFertigung.Kostenstelle
                 });
-                e.preventDefault();
             },
             deleteUser: function(user){
                 this.users.splice(this.users.indexOf(user), 1);
@@ -45,7 +43,7 @@
         created: function(){
             this.$http.get('https://jsonplaceholder.typicode.com/users')
                 .then(function(response){
-                    this.users = response.data;
+                    this.user = response.data;
                 })
         }
     }
